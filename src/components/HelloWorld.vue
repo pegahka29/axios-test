@@ -14,16 +14,28 @@
 
 <script setup>
 import { ref, onMounted, computed } from "vue";
-import { useStore } from "vuex";
-const store = useStore();
+// import { useStore } from "vuex";
+// const store = useStore();
+// const msg = ref("Welcome to my Vuex Store");
+// const getUsers = computed(() => {
+//     return store.getters.getUsers;
+// });
+// const users = computed(() => {
+//     return store.state.users;
+// });
+// onMounted(() => {
+//     store.dispatch("fetchUsers");
+// });
+import { useUserStore } from "@/store/users";
+const store = useUserStore();
 const msg = ref("Welcome to my Vuex Store");
 const getUsers = computed(() => {
-    return store.getters.getUsers;
+    return store.getUsers;
 });
 const users = computed(() => {
-    return store.state.users;
+    return store.users;
 });
 onMounted(() => {
-    store.dispatch("fetchUsers");
+    store.fetchUsers();
 });
 </script>
