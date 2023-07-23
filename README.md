@@ -1,4 +1,4 @@
-# axios-test
+# getting users from jsonplaceholder with Vuex and Pinia
 
 ## Project setup
 ```
